@@ -74,10 +74,13 @@ login_cb (struct evhttp_request *req, void *arg)
        ...
     */
 
+	char *response_data  = malloc(4096);
+    memset(response_data, 0, 4096);
+    strcpy(response_data, "{\"result\":\"ok\"}");
 
 
 
-    char *response_data = "http server sendback!";
+    //char *response_data = "http server sendback!";
     /* This holds the content we're sending. */
 
     //HTTP header
